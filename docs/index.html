@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>$PPR — Poor Pull Request</title>
+  <style>
+    :root {
+      --bg: #0d1117;
+      --fg: #c9d1d9;
+      --muted: #8b949e;
+      --accent: #f85149;
+      --accent-soft: #30363d;
+      --link: #58a6ff;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      margin-top: 3rem;
+      border-bottom: 1px solid var(--accent-soft);
+      padding-bottom: 0.4rem;
+    }
+
+    p {
+      max-width: 70ch;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li { margin: 0.4rem 0; }
+
+    code {
+      font-family: var(--mono);
+      background: var(--accent-soft);
+      padding: 0.15em 0.35em;
+      border-radius: 4px;
+      font-size: 0.95em;
+    }
+
+    blockquote {
+      border-left: 4px solid var(--accent);
+      padding-left: 1rem;
+      margin-left: 0;
+      color: var(--muted);
+    }
+
+    table {
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      border: 1px solid var(--accent-soft);
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+    }
+
+    th {
+      background: #161b22;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 4rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .tagline {
+      color: var(--muted);
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+      background: var(--accent-soft);
+    }
+
+    .badge.ceremonial { color: #d2a8ff; }
+    .badge.poor { color: var(--accent); }
+
+    .logo {
+        width: 150px;
+        height: 150px;
+        border-radius: 100%;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="./logo.png" alt="PPR Logo" />
+    <h1>$PPR — Poor Pull Request 🚩</h1>
+    <div class="tagline">One character. Full ceremony.</div>
+
+    <p><strong>$PPR</strong> exists for pull requests that absolutely did not need to exist — but went through CI, review, and approval anyway.</p>
+
+    <p>If you’ve ever:</p>
+    <ul>
+      <li>opened a PR to add a single <code>.</code></li>
+      <li>fixed a typo and waited for approval</li>
+      <li>reviewed a change smaller than this sentence</li>
+    </ul>
+
+    <p>Welcome. You are among peers.</p>
+
+    <h2>What Is a Poor Pull Request?</h2>
+
+    <blockquote>
+      A change so small it could have been a commit,<br />
+      yet important enough to involve the entire team.
+    </blockquote>
+
+    <p>Examples include:</p>
+    <ul>
+      <li><code>+ .</code></li>
+      <li><code>Fix typo</code></li>
+      <li><code>Remove trailing whitespace</code></li>
+      <li><code>Rename variable (no behavior change)</code></li>
+    </ul>
+
+    <p>These PRs are not mistakes. They are <strong>rituals</strong>.</p>
+
+    <h2>Automated Judgment System</h2>
+
+    <table>
+      <thead>
+        <tr><th>Change Size</th><th>Outcome</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>0 changes</td><td>🧘 No changes detected. Incredible restraint.</td></tr>
+        <tr><td>1 character</td><td>✅ Auto-LGTM + <span class="badge ceremonial">Ceremonial PR</span></td></tr>
+        <tr><td>2–5 characters</td><td>🚩 <span class="badge poor">Poor Pull Request</span></td></tr>
+        <tr><td>&gt;5 characters</td><td>😐 Treated as a real PR</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Contributing</h2>
+
+    <p>Smaller changes are held to higher standards. One-character PRs require emotional preparation.</p>
+
+    <p>Before opening a PR, read:</p>
+    <ul>
+      <li><a href="./README.md">README.md</a></li>
+      <li><a href="./CONTRIBUTING.md">CONTRIBUTING.md</a></li>
+      <li>The room</li>
+    </ul>
+
+    <h2>Final Warning</h2>
+
+    <p>If you submit a one-character pull request, this site will treat it with the gravity it deserves.</p>
+
+    <footer>
+      <p>Deployed via GitHub Pages. Reviewed unnecessarily.</p>
+      <p>LGTM.</p>
+    </footer>
+  </main>
+</body>
+</html>
